@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tìm số lớn nhất và nhỏ nhất</title>
+</head>
+<body>
+    <script>
+        function timMaxMin() {
+            let input = prompt("Nhập dãy số, cách nhau bằng dấu phẩy (VD: 5,10,2,8):");
+            let arr = input.split(',').map(Number);
+
+            if (arr.some(isNaN)) {
+                document.write("Dãy số không hợp lệ. Vui lòng nhập lại.");
+                return;
+            }
+
+            let max = Math.max(...arr);
+            let min = Math.min(...arr);
+
+            document.write(`Dãy số bạn nhập: ${arr.join(', ')}<br>`);
+            document.write(`Số lớn nhất: ${max}<br>`);
+            document.write(`Số nhỏ nhất: ${min}`);
+        }
+
+        timMaxMin();
+    </script>
+</body>
+</html>

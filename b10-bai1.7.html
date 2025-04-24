@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .menu {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      margin-left: 15%;
+    }
+    .menu a {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: rgb(202, 105, 138);
+      transition: 0.3s;
+    }
+    .menu a:hover {
+      background-color: rgb(139, 72, 95);
+    }
+    .home a {
+      background-color: rgb(20, 209, 209);
+    }
+    .home a:hover {
+      background-color: rgba(25, 139, 139, 0.651);
+    }
+  </style>
+  <body>
+    <h2>thay thế node ở vị trí xác định: replaceChild</h2>
+    <div id="container">
+      <p id="p1">Hello World!</p>
+      <p id="p2">Tui tên là Đặng Ngọc Anh</p>
+    </div>
+    <button onclick="changenode()">Change Node</button>
+    <script>
+      function changenode() {
+        var node = document.createElement("div");
+        node.innerText = "Lớp CNTT D2024 A";
+        var x = document.getElementById("container");
+        var y = document.getElementById("p2");
+        x.replaceChild(node, y);
+      }
+    </script>
+  </body>
+</html>

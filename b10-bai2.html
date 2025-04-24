@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .menu {
+      width: 200px;
+    }
+
+    .menu > button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .submenu {
+      display: none;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .submenu div {
+      padding: 12px;
+      cursor: pointer;
+    }
+
+    .submenu div:hover {
+      background-color: #ddd;
+    }
+    .menuu {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        margin-left: 15%;
+      }
+      .menuu a {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: rgb(202, 105, 138);
+        transition: 0.3s;
+      }
+      .menuu a:hover {
+        background-color: rgb(139, 72, 95);
+      }
+      .home a {
+        background-color: rgb(20, 209, 209);
+      }
+      .home a:hover {
+        background-color: rgba(25, 139, 139, 0.651);
+      }
+  </style>
+</head>
+<style>.back-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3361d6;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.back-home:hover {
+    background-color: #526ddc;
+    }</style>
+<body>
+
+<div class="menu">
+  <button onclick="toggleMenu()">Thiết kế web</button>
+  <div id="submenu" class="submenu">
+    <div>HTML</div>
+    <div>CSS</div>
+    <div>Javascript</div>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    var submenu = document.getElementById("submenu");
+    if (submenu.style.display === "block") {
+      submenu.style.display = "none";
+    } else {
+      submenu.style.display = "block";
+    }
+  }
+</script>
+</body>
+</html>

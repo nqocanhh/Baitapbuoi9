@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+  <style>
+    .menu {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      margin-left: 15%;
+    }
+    .menu a {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: rgb(202, 105, 138);
+      transition: 0.3s;
+    }
+    .menu a:hover {
+      background-color: rgb(139, 72, 95);
+    }
+    .home a {
+      background-color: rgb(20, 209, 209);
+    }
+    .home a:hover {
+      background-color: rgba(25, 139, 139, 0.651);
+    }
+  </style>
+  <body>
+    <h1 id="par">Hello World!</h1>
+    <h2 id="par">Tui tên là Đặng Ngọc Anh</h2>
+    <script>
+      var pa = document.getElementById("par");
+      pa.addEventListener("click", myFunction);
+      pa.addEventListener("click", someOtherFunction);
+      function myFunction() {
+        alert("Lớp CNTT D2024 A");
+      }
+      function someOtherFunction() {
+        alert("Trường Đại học Thủ đô");
+      }
+    </script>
+   </body>
+ </html>
+ 
+ 

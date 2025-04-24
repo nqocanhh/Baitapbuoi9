@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+  <style>
+    .menu {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      margin-left: 15%;
+    }
+    .menu a {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: rgb(202, 105, 138);
+      transition: 0.3s;
+    }
+    .menu a:hover {
+      background-color: rgb(139, 72, 95);
+    }
+    .home a {
+      background-color: rgb(20, 209, 209);
+    }
+    .home a:hover {
+      background-color: rgba(25, 139, 139, 0.651);
+    }
+  </style>
+  <body>
+    <h2>Thêm node ở vị trí xác định: before</h2>
+    <div id="container">
+      <p id="p1">là tui nè</p>
+      <p id="p2">Đặng Ngọc Anh</p>
+    </div>
+    <button onclick="addnode()">Add Node</button>
+    <script>
+      function addnode() {
+        var x = document.createElement("p");
+        x.className = "p3";
+        x.innerText = "baby dang iu";
+        var cha = document.getElementById("container");
+        var y = document.getElementById("p2");
+        cha.insertBefore(x, y);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .menu {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      margin-left: 15%;
+    }
+    .menu a {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: rgb(202, 105, 138);
+      transition: 0.3s;
+    }
+    .menu a:hover {
+      background-color: rgb(139, 72, 95);
+    }
+    .home a {
+      background-color: rgb(20, 209, 209);
+    }
+    .home a:hover {
+      background-color: rgba(25, 139, 139, 0.651);
+    }
+  </style>
+  <body>
+    <h2>Loại bỏ node</h2>
+    <div>
+      <p id="p1">Hello World!</p>
+      <p id="p2">Tui tên là Đặng Ngọc Anh</p>
+      <button onclick="remove_node1('p1')">Remove Node</button>
+    </div>
+    <div id="container">
+      <p id="p3">Lớp CNTT D2024 A</p>
+      <p id="p4">Trường Đại học Thủ đô</p>
+      <button onclick="remove_node2('container', 'p4')">Remove Node</button>
+    </div>
+    <script>
+      function remove_node1(x) {
+        var elmnt = document.getElementById(x);
+        if (elmnt) {
+          elmnt.remove();
+        }
+      }
+      function remove_node2(x, y) {
+        var cha = document.getElementById(x);
+        var con = document.getElementById(y);
+        if (cha && con) {
+          cha.removeChild(con);
+        }
+      }
+    </script>
+  </body>
+</html>

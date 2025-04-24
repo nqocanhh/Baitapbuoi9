@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bài 3</title>
+  </head>
+  <style>
+    .menu {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      margin-left: 15%;
+    }
+    .menu a {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: rgb(202, 105, 138);
+      transition: 0.3s;
+    }
+    .menu a:hover {
+      background-color: rgb(139, 72, 95);
+    }
+    .home a {
+      background-color: rgb(20, 209, 209);
+    }
+    .home a:hover {
+      background-color: rgba(25, 139, 139, 0.651);
+    }
+  </style>
+  <body>
+    <h2>Hãy đoán xem! (từ 1 đến 10)</h2>
+    <input
+      type="number"
+      id="guessInput"
+      min="1"
+      max="10"
+      placeholder="Nhập số từ 1-10"
+    />
+    <button onclick="guessNumber()">Đoán</button>
+    <p id="message"></p>
+    <script>
+        let randomNumber = Math.floor(Math.random() * 10) + 1;
+function guessNumber() {
+  const userGuess = parseInt(document.getElementById("guessInput").value);
+  const message = document.getElementById("message");
+
+  if (isNaN(userGuess) || userGuess < 1 || userGuess > 10) {
+    message.textContent = "Vui lòng nhập một số hợp lệ từ 1 đến 10!";
+    return;
+  }
+
+  if (userGuess === randomNumber) {
+    message.textContent = "Chúc mừng! Bạn đã đoán đúng số!";
+  } else {
+    message.textContent = "Sai rồi! Hãy thử lại.";
+  }
+}
+    </script>
+  </body>
+</html>

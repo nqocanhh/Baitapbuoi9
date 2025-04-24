@@ -1,0 +1,56 @@
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1.12</title>
+    <style>
+      .font {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode";
+      }
+      .mau {
+        color: palevioletred;
+      }
+      .co {
+        font-size: 5px;
+      }
+
+      .menu {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        margin-left: 15%;
+      }
+      .menu a {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: rgb(202, 105, 138);
+        transition: 0.3s;
+      }
+      .menu a:hover {
+        background-color: rgb(139, 72, 95);
+      }
+      .home a {
+        background-color: rgb(20, 209, 209);
+      }
+      .home a:hover {
+        background-color: rgba(25, 139, 139, 0.651);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="font" id="td1">Hello World!</h1>
+    <button onclick="tonho()">try it</button>
+    <script>
+      var pt = document.getElementById("td1");
+      pt.classList.add("mau", "co");
+      function tonho() {
+        pt.classList.toggle("co");
+      }
+    </script>
+  </body>
+</html>
+
